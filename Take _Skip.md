@@ -186,8 +186,8 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-F
-G
+F    
+G    
 偷懶不想寫
 
 #### 簡單實作自己的 TakeLast
@@ -251,7 +251,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-G
+G    
 偷懶不想寫
 #### 簡單實作自己的 Skip
 ```C#
@@ -307,8 +307,8 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-F
-G
+F    
+G    
 偷懶不想寫
 
 ```C#
@@ -325,7 +325,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-G
+G    
 偷懶不想寫
 
 #### 簡單實作自己的 SkipWhile
@@ -408,8 +408,8 @@ static void Main()
 }
 ```
 ##### 輸出結果
-A
-B
+A    
+B    
 C
 
 #### 簡單實作自己的 SkipLast
