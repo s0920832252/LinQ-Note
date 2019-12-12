@@ -239,7 +239,7 @@ OrderBy , OrderByDescending , ThenBy , ThenByDescending ,
 class EqualityComparer<TSource> : IEqualityComparer<TSource> where TSource : class
 {
      private PropertyInfo[] properties = null;
-     public new bool Equals(TSource x, TSource y)
+     public bool Equals(TSource x, TSource y)
      {
           if (properties == null)
                properties = x.GetType().GetProperties();
