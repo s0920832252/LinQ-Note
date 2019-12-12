@@ -20,7 +20,7 @@
 19. [Generation Operators - Repeat & Range & Empty & DefaultIfEmpty](https://hackmd.io/MzS8dYhXT6yuc_jJAqZMog?view)
 23. Join Operators - Join
 20. [Miscellaneous Operators - Concat & SequenceEqual & Zip ](https://hackmd.io/Zl9Vtkh3RYqfT5ieGHmczw?view)
-18. Quantifiers - Any & All & Contains 
+18. [Quantifiers - Any & All & Contains ](https://hackmd.io/foPC9IiWQWWoqDFn9zzTUQ?view)
 14. [Grouping Operators - GroupBy & Lookup (未完成)](https://hackmd.io/@CityChen/BkNZ-cJOS)
 22. Conversion Operators - ToArray & ToLookup & ToList & ToDictionary & OfType & Cast & AsEnumerable & AsQueryable
 17. Set Operators - Distinct & Union & Intersect & Except
