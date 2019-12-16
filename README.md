@@ -11,6 +11,7 @@
 9. [LinQ基礎 - 泛型委派與Func、Action、Predicate](https://hackmd.io/xQoAvh0sTdaiHpSc9qZvDQ?view)
 10. [LinQ基礎 - 延遲執行(Deferred Execution)](https://hackmd.io/W__5nByUSCSWMsUEL82ZbA?view)
 11. [LINQ基礎 - IComparable vs IComparer And IEquatable vs IEqualityComparer](https://hackmd.io/VrhUjGY9QPO2uOE06nR5ZA?view#IEquatable)
+1. LINQ基礎 - Lookup
 11. [Projection Operators - Select](https://hackmd.io/9TPoAhThTzGCVvwGxfwqOg?view)
 12. [Projection Operators - SelectMany](https://hackmd.io/mNBV8TbOQ32VSdY83nLcHg?view)
 12. [Restriction Operators - Where](https://hackmd.io/DcrS1BVHT9C1ygmUxU-yGg?view)
@@ -21,7 +22,7 @@
 23. Join Operators - Join
 20. [Miscellaneous Operators - Concat & SequenceEqual & Zip ](https://hackmd.io/Zl9Vtkh3RYqfT5ieGHmczw?view)
 18. [Quantifiers - Any & All & Contains ](https://hackmd.io/foPC9IiWQWWoqDFn9zzTUQ?view)
-14. [Grouping Operators - GroupBy & Lookup (未完成)](https://hackmd.io/@CityChen/BkNZ-cJOS)
+14. [Grouping Operators - GroupBy ](https://hackmd.io/@CityChen/BkNZ-cJOS)
 22. Conversion Operators - ToArray & ToLookup & ToList & ToDictionary & OfType & Cast & AsEnumerable & AsQueryable
 17. Set Operators - Distinct & Union & Intersect & Except
 13. Ordering Operators - OrderBy & ThenBy & OrderByDescending & ThenByDescending & Reverse
