@@ -153,7 +153,9 @@ public class Lookup<TKey, TElement> : IEnumerable<IGrouping<TKey, TElement>>, IL
         foreach (TElement item in source)
         {
             TKey key = keySelector(item);
-            if (key != null) lookup.GetGrouping(key, true).Add(item);
+            if (key != null) {
+                lookup.GetGrouping(key, true).Add(item);
+            }
         }
         return lookup;
     }
