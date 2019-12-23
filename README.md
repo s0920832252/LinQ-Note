@@ -11,7 +11,7 @@
 9. [LinQ基礎 - 泛型委派與Func、Action、Predicate](https://hackmd.io/xQoAvh0sTdaiHpSc9qZvDQ?view)
 10. [LinQ基礎 - 延遲執行(Deferred Execution)](https://hackmd.io/W__5nByUSCSWMsUEL82ZbA?view)
 11. [LINQ基礎 - IComparable vs IComparer And IEquatable vs IEqualityComparer](https://hackmd.io/VrhUjGY9QPO2uOE06nR5ZA?view#IEquatable)
-1. LINQ基礎 - Lookup
+1. [LINQ基礎 - Lookup](https://hackmd.io/yMO0aHHPQKm61t0ceAeDCQ)
 11. [Projection Operators - Select](https://hackmd.io/9TPoAhThTzGCVvwGxfwqOg?view)
 12. [Projection Operators - SelectMany](https://hackmd.io/mNBV8TbOQ32VSdY83nLcHg?view)
 12. [Restriction Operators - Where](https://hackmd.io/DcrS1BVHT9C1ygmUxU-yGg?view)
