@@ -7,8 +7,8 @@ tags: LinQ , C# , Join Operators
 # Join
 在 SQL 中 , 我們可能會有兩張表 , 一張表是學生的資料 , 而另一張表是課程的資料 , 然後會有一個 ID 來關聯兩張表. 這時如果我們要找某個學生有哪些課程就會使用到 Join 的語法來合併學生以及課程的資料 , 藉此找到與此學生對應
 
-Join 有很多種形式 , 如下圖
-![](https://i.imgur.com/susPQqA.png)
+Join 有很多種形式 , 如下圖    
+![](https://i.imgur.com/susPQqA.png)    
 [參考來源](https://dotblogs.com.tw/brooke/2015/03/15/150726)
 
 LinQ 的 Join 是 Inner Join (圖中最中間) ,
