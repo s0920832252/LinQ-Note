@@ -19,8 +19,9 @@
 
 16. [Partitioning Operators - Take & TakeWhile & TakeLast & Skip & SkipWhile & SkipLast](https://hackmd.io/R4TmtFzRTWanD6Hla0-jHQ?view)
 19. [Generation Operators - Repeat & Range & Empty & DefaultIfEmpty](https://hackmd.io/MzS8dYhXT6yuc_jJAqZMog?view)
-23. [Join Operators - Join](https://hackmd.io/ykn7yeeLS4qRgsNck1m_RA?view)
 21. Join Operators - GroupJoin 
+23. [Join Operators - Join](https://hackmd.io/ykn7yeeLS4qRgsNck1m_RA?view)
+
 
 20. [Miscellaneous Operators - Concat & SequenceEqual & Zip ](https://hackmd.io/Zl9Vtkh3RYqfT5ieGHmczw?view)
 18. [Quantifiers - Any & All & Contains ](https://hackmd.io/foPC9IiWQWWoqDFn9zzTUQ?view)
