@@ -21,8 +21,9 @@
 19. [Generation Operators - Repeat & Range & Empty & DefaultIfEmpty](https://hackmd.io/MzS8dYhXT6yuc_jJAqZMog?view)
 
 14. Grouping Operators - GroupBy
-21. [Join Operators - GroupJoin ](https://hackmd.io/jX60lVihStOT5Lk8tVS7VA?view)
+
 23. [Join Operators - Join](https://hackmd.io/ykn7yeeLS4qRgsNck1m_RA?view)
+21. [Join Operators - GroupJoin ](https://hackmd.io/jX60lVihStOT5Lk8tVS7VA?view)
 
 
 20. [Miscellaneous Operators - Concat & SequenceEqual & Zip ](https://hackmd.io/Zl9Vtkh3RYqfT5ieGHmczw?view)
