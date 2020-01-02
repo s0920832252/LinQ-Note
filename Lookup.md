@@ -175,6 +175,8 @@ public class Lookup<TKey, TElement> : IEnumerable<IGrouping<TKey, TElement>>, IL
         {
             Grouping grouping = GetGrouping(key, false);
             return grouping ?? Array.Empty<TElement>() as IEnumerable<TElement>;
+            // Array.Empty<TElement>() 是 Array 的靜態 field 
+            // 其值為 new TElement[0] 
         }
     }
 
