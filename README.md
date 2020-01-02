@@ -19,13 +19,14 @@
 
 16. [Partitioning Operators - Take & TakeWhile & TakeLast & Skip & SkipWhile & SkipLast](https://hackmd.io/R4TmtFzRTWanD6Hla0-jHQ?view)
 19. [Generation Operators - Repeat & Range & Empty & DefaultIfEmpty](https://hackmd.io/MzS8dYhXT6yuc_jJAqZMog?view)
+
+14. Grouping Operators - GroupBy
 21. [Join Operators - GroupJoin ](https://hackmd.io/jX60lVihStOT5Lk8tVS7VA?view)
 23. [Join Operators - Join](https://hackmd.io/ykn7yeeLS4qRgsNck1m_RA?view)
 
 
 20. [Miscellaneous Operators - Concat & SequenceEqual & Zip ](https://hackmd.io/Zl9Vtkh3RYqfT5ieGHmczw?view)
 18. [Quantifiers - Any & All & Contains ](https://hackmd.io/foPC9IiWQWWoqDFn9zzTUQ?view)
-14. Grouping Operators - GroupBy
 22. Conversion Operators - ToArray & ToLookup & ToList & ToDictionary & OfType & Cast & AsEnumerable & AsQueryable
 17. Set Operators - Distinct & Union & Intersect & Except
 13. Ordering Operators - OrderBy & ThenBy & OrderByDescending & ThenByDescending & Reverse
