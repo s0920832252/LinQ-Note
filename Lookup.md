@@ -24,18 +24,28 @@ digraph hierarchy {
 }
 ```
 
-##### Lookup : 一個 key 可以對應至少一個 value
+##### Lookup : 一個 key 對應一個 group , 也就是可以對應至少一個 value
 ```graphviz
 digraph hierarchy {
-
-                nodesep=0.2 // increases the separation between nodes
-                
-                node [color=Red,fontname=Courier,shape=box] //All nodes will this shape and colour
-                edge [color=Blue, style=line] //All the lines look like this
-
-                Key1->{Value1 Value2 Value3}
-                Key2->{Value4 Value5}
-                Key3->{Value6}                
+                nodesep=0.4 // increases the separation between nodes
+	node[color=Red,fontname=Courier,shape=record]
+    edge [color=Blue, style=line] //All the lines look like this
+    
+       subgraph cluster_level1{
+                label ="Group 1";                  
+	            struct1 [label="Value1|Value2|Value3"];
+        }
+        subgraph cluster_level2{
+                label ="Group 2";                  
+                struct2 [label="Value4|Value5"];
+        }
+        subgraph cluster_level3{
+                label ="Group 3";                  
+                struct3 [label="Value6"];
+        }
+        Key1->struct1
+        Key2->struct2
+        Key3->struct3
 }
 ```
 
