@@ -20,7 +20,7 @@
 16. [Partitioning Operators - Take & TakeWhile & TakeLast & Skip & SkipWhile & SkipLast](https://hackmd.io/R4TmtFzRTWanD6Hla0-jHQ?view)
 19. [Generation Operators - Repeat & Range & Empty & DefaultIfEmpty](https://hackmd.io/MzS8dYhXT6yuc_jJAqZMog?view)
 
-14. Grouping Operators - GroupBy
+14. [Grouping Operators - GroupBy](https://hackmd.io/1TKMrbVMQZuTJ1wGGg6URg?view)
 
 23. [Join Operators - Join](https://hackmd.io/ykn7yeeLS4qRgsNck1m_RA?view)
 21. [Join Operators - GroupJoin ](https://hackmd.io/jX60lVihStOT5Lk8tVS7VA?view)
