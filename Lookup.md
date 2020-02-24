@@ -335,6 +335,16 @@ public class Lookup<TKey, TElement> : IEnumerable<IGrouping<TKey, TElement>>, IL
 }
 ```
 
+### Summary
+- Lookup 的建立流程    
+    - 使用 Create() 去建立 Lookup 物件 (建立分組資料集合)
+    - 走訪資料集合並且使用 GetGrouping() 去得到 group
+        - 若該資料的 key 與所有 group 的 key 都不同 , 則為其建立一個 group 回傳
+        - 若該資料的 key 與某個 group 的 key 相同 , 則將該 group 回傳
+    - 使用 Add() 去將元素放入上述使用 GetGrouping() 得到的 group 中
+
+- Lookup 的 grouping[] size 預設為 7 , 但在每次 GetGrouping() 時候 , 都會去檢查目前空間是否已經使用完畢. 若使用完畢則使用 Lookup 的 Resize() 這個方法去增加 grouping[] size --- "目前的全部空間" * 2 +1
+
 #### 參考來源
 [Lookup.cs](https://github.com/dotnet/corefx/blob/master/src/System.Linq/src/System/Linq/Lookup.cs)    
 [Grouping.cs](https://github.com/dotnet/corefx/blob/master/src/System.Linq/src/System/Linq/Grouping.cs)    
