@@ -300,15 +300,27 @@ public static IEnumerable<TResult> MyGroupBy<TSource, TKey, TElement, TResult>(t
 
 
 ### 總結
+- GroupBy 的流程
+    - 實際上 GroupBy 的程式碼會去建立一個走訪器 Enumerable.
+      不過我偷懶 , 不實作 , 若有興趣 , 請檢閱下方參考有關於 GroupBy 的程式碼.
+    1. 建立相對應的走訪器
+    2. 走訪器會去使用 Lookup.Create() 得到 group 資料
+        - 使用 GetGrouping() 對於 group 的新增或查詢(找 group )
+        - 使用 Add() 將元素將入 group 中
+    3. 依序走訪各個 group.
+        - 依據 resultSelector 的有無 , 而去使用不同的方法.
+            - 若有 , 使用 ApplyResultSelector()
+            - 若無 , 使用 GetEnumerator()
+
 
 ### 參考
-[[C#] ToLookup, GroupBy, ToDictionary簡單介紹](https://dotblogs.com.tw/kirkchen/2011/07/16/toolookup_groupby_todicionary_introduction)
-[Grouping.cs](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq/src/System/Linq/Grouping.cs)
-[Enumerable.cs](https://github.com/microsoft/referencesource/blob/master/System.Core/System/Linq/Enumerable.cs)
-[C#的利器LINQ-GroupBy的原碼探索](https://ithelp.ithome.com.tw/articles/10196274)
-[C#的利器LINQ-GroupBy的應用](https://ithelp.ithome.com.tw/articles/10196181)
-[[C#]LINQ–GroupBy 群組](https://kw0006667.wordpress.com/2013/05/31/clinqgroupby-%E7%BE%A4%E7%B5%84/)
-[利用LINQ GroupBy快速分組歸類](https://blog.darkthread.net/blog/linq-groupby-todictionary-grouping/)
+[[C#] ToLookup, GroupBy, ToDictionary簡單介紹](https://dotblogs.com.tw/kirkchen/2011/07/16/toolookup_groupby_todicionary_introduction)    
+[Grouping.cs](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Linq/src/System/Linq/Grouping.cs)    
+[Enumerable.cs](https://github.com/microsoft/referencesource/blob/master/System.Core/System/Linq/Enumerable.cs)    
+[C#的利器LINQ-GroupBy的原碼探索](https://ithelp.ithome.com.tw/articles/10196274)    
+[C#的利器LINQ-GroupBy的應用](https://ithelp.ithome.com.tw/articles/10196181)    
+[[C#]LINQ–GroupBy 群組](https://kw0006667.wordpress.com/2013/05/31/clinqgroupby-%E7%BE%A4%E7%B5%84/)    
+[利用LINQ GroupBy快速分組歸類](https://blog.darkthread.net/blog/linq-groupby-todictionary-grouping/)    
 [C# LINQ: GroupBy](https://jasper-it.blogspot.com/2015/01/c-linq-groupby.html)
 
 
