@@ -73,6 +73,7 @@ TakeWhile 會從資料集合開頭逐一檢查資料成員是否滿足條件 , �
     - 只要指定的條件為 true，就會傳回序列中的項目。 項目的索引是用於述詞功能的邏輯中。
 - 兩個方法的差別在於 predicate 有沒有傳入 index 參數    
 - predicate : 終止查詢的函數 , 一旦其結果為 false , 則立刻中止查詢.
+    - 繼續走訪的判斷條件.
 - TakeWhile : 是由 predicate 來判斷是否終止查詢. 也就是說 , TakeWhile 回傳的資料成員皆是 predicate 判斷為 true , 且位置相鄰連續.
 
 #### 使用時機
@@ -279,6 +280,7 @@ SkipWhile 會從資料集合開頭逐一檢查資料成員是否滿足條件 , �
     - 只要指定的條件為 true，便略過序列中的項目，然後傳回其餘項目。 項目的索引是用於述詞功能的邏輯中。
 - 兩個方法的差別在於 predicate 有沒有傳入 index 參數
 - predicate : 判斷忽略的函數 , 若結果為 true 則忽略繼續走訪 ,一旦其結果為 false , 則回傳剩餘的項目.
+    - **繼續忽略的判斷條件**
 - SkipWhile : 回傳第一個不符合條件的元素以及在此元素之後的所有集合元素.
 
 #### 使用時機
@@ -357,17 +359,17 @@ public static IEnumerable<TSource> MySkipWhile<TSource>(this IEnumerable<TSource
 
 private static IEnumerable<TSource> MySkipWhileIterator<TSource>(IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
 {
-    var findSplitPoint = false;
-    var index = 0;
-    foreach (var item in cards)
-    {
-        if (predicate(item, index) || findSplitPoint)
-        {
-            yield return item;
-            findSplitPoint = true;
-        }
-        index++;
-    }
+     var findSplitPoint = false;
+     var index = 0;
+     foreach (var item in cards)
+     {
+          if (predicate(item, index) || findSplitPoint)
+          {
+               yield return item;
+               findSplitPoint = true;
+          }
+          index++;
+     }
 }
 ```
 
