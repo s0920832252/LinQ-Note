@@ -338,19 +338,15 @@ public static IEnumerable<TSource> MySkipWhile<TSource>(this IEnumerable<TSource
 
 private static IEnumerable<TSource> MySkipWhileIterator<TSource>(IEnumerable<TSource> source, Func<TSource, bool> predicate)
 {
-     bool findSpiltPonit = false;
-     foreach (var item in source)
-     {
-          if (!findSpiltPonit && !predicate(item))
-          {
-               findSpiltPonit = true;
-          }
-
-          if (findSpiltPonit)
-          {
-               yield return item;
-          }
-     }
+　    var findSplitPoint = false;
+　    foreach (var item in cards)
+    　{
+           if (predicate(item) || findSplitPoint )
+        　　{
+                yield return item;
+                findSplitPoint  = true;
+            }
+    　}
 }
 
 public static IEnumerable<TSource> MySkipWhile<TSource>(this IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
@@ -361,20 +357,17 @@ public static IEnumerable<TSource> MySkipWhile<TSource>(this IEnumerable<TSource
 
 private static IEnumerable<TSource> MySkipWhileIterator<TSource>(IEnumerable<TSource> source, Func<TSource, int, bool> predicate)
 {
-     bool findSpiltPonit = false;
-     int index = 0;
-     foreach (var item in source)
-     {
-          if (!findSpiltPonit && !predicate(item, checked(index++)))
-          {
-               findSpiltPonit = true;
-          }
-
-          if (findSpiltPonit)
-          {
-               yield return item;
-          }
-     }
+    var findSplitPoint = false;
+    var index = 0;
+    foreach (var item in cards)
+    {
+        if (predicate(item, index) || findSplitPoint)
+        {
+            yield return item;
+            findSplitPoint = true;
+        }
+        index++;
+    }
 }
 ```
 
