@@ -343,7 +343,7 @@ private static IEnumerable<TSource> MySkipWhileIterator<TSource>(IEnumerable<TSo
 　    var findSplitPoint = false;
 　    foreach (var item in cards)
     　{
-           if (predicate(item) || findSplitPoint )
+           if (!predicate(item) || findSplitPoint )
         　　{
                 yield return item;
                 findSplitPoint  = true;
@@ -363,7 +363,7 @@ private static IEnumerable<TSource> MySkipWhileIterator<TSource>(IEnumerable<TSo
      var index = 0;
      foreach (var item in cards)
      {
-          if (predicate(item, index) || findSplitPoint)
+          if (!predicate(item, index) || findSplitPoint)
           {
                yield return item;
                findSplitPoint = true;
