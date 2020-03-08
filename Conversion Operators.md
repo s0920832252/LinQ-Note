@@ -640,7 +640,7 @@ public static IEnumerable<TSource> AsEnumerable<TSource>(
 ```
 
 ### 參考
-[LINQ使用细节之.AsEnumerable()和.ToList()的区别]https://www.cnblogs.com/mainz/archive/2011/04/08/2009485.html)
+[LINQ使用细节之.AsEnumerable()和.ToList()的区别](https://www.cnblogs.com/mainz/archive/2011/04/08/2009485.html)
 [What's the difference(s) between .ToList(), .AsEnumerable(), AsQueryable()?](https://stackoverflow.com/questions/17968469/whats-the-differences-between-tolist-asenumerable-asqueryable)     
 [REIMPLEMENTING LINQ TO OBJECTS: PART 36 – ASENUMERABLE](https://codeblog.jonskeet.uk/2011/01/14/reimplementing-linq-to-objects-part-36-asenumerable/)     
 [Conversion Operators in LINQ](https://www.c-sharpcorner.com/UploadFile/219d4d/conversion-operators-in-linq/)  
