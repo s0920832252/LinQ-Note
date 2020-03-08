@@ -261,6 +261,33 @@ class EqualityComparer<TSource> : IEqualityComparer<TSource> where TSource : cla
 }
 ```
 
+### 補充 : [EqualityComparer<T>.Default 屬性](https://docs.microsoft.com/zh-tw/dotnet/api/system.collections.generic.equalitycomparer-1.default?view=netframework-4.8)
+
+依照泛型來決定回傳哪一個已被微軟定義好的比較器.
+
+- 大部分方法預設是使用此方法去製造比較器.
+- 未來我們自定義方法或是類別的時候 , 可使用此方法去幫我們產生比較器
+
+```C#
+public static Dictionary<TKey, TElement> MyToDictionary<TSource, TKey, TElement>(this IEnumerable<TSource> source, Func<TSource, TKey> keySelector, Func<TSource, TElement> elementSelector, IEqualityComparer<TKey> comparer)
+{
+    if (source is null || keySelector is null || elementSelector is null)
+    {
+        throw new Exception("null exception");
+    }
+
+    // 若 comparer 為 null 使用微軟定義的比較器.
+    var d = new Dictionary<TKey, TElement>(
+                    comparer ?? EqualityComparer<TKey>.Default
+                );
+                
+    foreach (var element in source)
+    {
+        d.Add(keySelector(element), elementSelector(element));
+    }
+    return d;
+}
+```
 
 ---
 ### Thank you! 
