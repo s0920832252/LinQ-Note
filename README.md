@@ -1,5 +1,6 @@
 ﻿# LinQ 筆記目錄
 
+0. [LinQ 好用網站清單](https://hackmd.io/geIPKi1lTbC7HlAtmE4gcA?sync=&type=)
 1. [LINQ基礎 - 簡介](https://hackmd.io/gwdxkE0GQiKZwsFCZk6v8Q)
 2. [LINQ基礎 - 隱含型別var vs 匿名型別 vs 動態型別 dynamic](https://hackmd.io/xUTkMJ6WRI-q2HRrO5GKkg)
 3. [LINQ基礎 - Extension Method(擴充方法)](https://hackmd.io/HacOoV94SZy9ryAORocmnw)
