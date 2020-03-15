@@ -31,7 +31,8 @@
 18. [Quantifiers - Any & All & Contains ](https://hackmd.io/foPC9IiWQWWoqDFn9zzTUQ?view)
 22. [ToArray & ToList & ToLookup & ToDictionary & ToHashSet & OfType & Cast & AsEnumerable](https://hackmd.io/kR9KRGIsSs20M-pxyU8lQA?view)
 17. Set Operators - Distinct & Union & Intersect & Except
-13. Ordering Operators - OrderBy & ThenBy & OrderByDescending & ThenByDescending
+13. [Ordering Operators - OrderBy & ThenBy & OrderByDescending & ThenByDescending 使用介紹](https://hackmd.io/BnKNeL1GTPWq0vrP6h-McA?view#OrderBy-amp-ThenBy-amp-OrderByDescending-amp-ThenByDescending-%E4%BD%BF%E7%94%A8%E4%BB%8B%E7%B4%B9)
+13. Ordering Operators - OrderBy & ThenBy & OrderByDescending & ThenByDescending 實作探討
 13. Ordering Operators - Reverse
 15. [Aggregate Operators - Count & Sum & Average & Min & Max](https://hackmd.io/itytIKAnRrWWUoZ79iyypQ?view)
 16. [Aggregate Operators - Aggregate](https://hackmd.io/N-wyJYp8QC2Ro1KAXnzfzA)
