@@ -67,7 +67,7 @@ LinQ 與排序有關的方法一共有四個方法 , 分別是 OrderBy , ThenBy 
 
 OrderBy有兩個方法 , 其差別在於要不要傳入自定義比較器. 其回傳值為 IOrderedEnumerable , 此型別繼承 IEnumerable. 該型別的責任為排序資料 , 因此之後若使用 ThenBy 或是 ThenByDescending 再增加排序條件 , IOrderedEnumerable 也有這個能力可以處理.
 
-因為 IOrderedEnumerable 繼承 IEnumerable , 所以 OrderBy 方法可以再接 OrderBy , 但前一個 OrderBy 所設定的排序方法將會被忽略. 改以最後一個 OrderBy 設定的排序方法為初始排序方法.
+因為 **IOrderedEnumerable 繼承 IEnumerable** , 所以 OrderBy 方法可以再接 OrderBy , 甚至 ThenBy 後也可以再接 OrderBy 但再最後一個 OrderBy 之前所設定的排序方法皆會被忽略. 初始排序會以最後一個 OrderBy 設定的排序方法為初始排序方法.
 
 #### OrderBy 的使用範例
 ```
@@ -160,7 +160,9 @@ static void Main(string[] args)
     ```
 
 ThenBy 是用來設定第二個或者第 N 個 排序方式. 也就是說是再設定初始排序方式之後. 所以 ThenBy 一定是接再 OrderBy 之後.
-再介紹 OrderBy 時 , 有介紹到其回傳值型態為 IOrderedEnumerable. 而 ThenBy 的輸入參數型態為 IOrderedEnumerable , 這代表**你在一個方法回傳值型態為 IEnumerable 後面是不能接 ThenBy 的 , 要先接OrderBy才能用ThenBy.**
+再介紹 OrderBy 時 , 有介紹到其回傳值型態為 IOrderedEnumerable. 而 **ThenBy 的輸入參數型態為 IOrderedEnumerable , 回傳值型態也是 IOrderedEnumerable**
+1. 這代表**你在一個方法回傳值型態為 IEnumerable 後面是不能接 ThenBy 的 , 要先接OrderBy才能用ThenBy.**
+2. **ThenBy 後面可以繼續接 ThenBy 系列** , 因為其回傳值與輸入參數型態相同
 
 ThenBy 的排序方式為**遞增排序**
 
