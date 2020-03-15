@@ -70,7 +70,7 @@ OrderBy有兩個方法 , 其差別在於要不要傳入自定義比較器. 其�
 因為 **IOrderedEnumerable 繼承 IEnumerable** , 所以 OrderBy 方法可以再接 OrderBy , 甚至 ThenBy 後也可以再接 OrderBy 但再最後一個 OrderBy 之前所設定的排序方法皆會被忽略. 初始排序會以最後一個 OrderBy 設定的排序方法為初始排序方法.
 
 #### OrderBy 的使用範例
-```
+```C#
 static void Main(string[] args)
 {
     var pets = new List<(string Name, int Age)>()
