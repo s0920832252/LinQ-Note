@@ -111,8 +111,10 @@ internal struct Buffer<TElement>
 }
 ```
 
-
-
+### 參考
+[difference between IEnumerable<T>.Reverse & List<T>.Reverse [duplicate]](https://stackoverflow.com/questions/30263223/difference-between-ienumerablet-reverse-listt-reverse)
+[Why there is two completely different version of Reverse for List and IEnumerable?
+](https://stackoverflow.com/questions/12390971/why-there-is-two-completely-different-version-of-reverse-for-list-and-ienumerabl)
 
 ### Thank you! 
 
