@@ -144,6 +144,41 @@ private static IEnumerable<TResult> JoinIterator<TOuter, TInner, TKey, TResult>(
 - 兩個序列 Join 時，是利用 KeySelector 所取出的 TKey 做相等比較，第一個多載方法用 TKey 型別預設比較子，第二個多載方法則使用自訂的相等比較子
 - Join 後的輸出序列中的項目 , 其原本 Join 前 , 分別在 outerKeySelector 和 innerKeySelector 取出之 TKey 值必定相等.
 
+### 補充寫法
+```C#
+public static IEnumerable<TResult> MyJoin<TOuter, TInner, TKey, TResult>(
+        this IEnumerable<TOuter> outer,
+        IEnumerable<TInner> inner,
+        Func<TOuter, TKey> outerKeySelector,
+        Func<TInner, TKey> innerKeySelector,
+        Func<TOuter, TInner, TResult> resultSelector)
+{
+    return MyJoin(outer, inner, outerKeySelector, innerKeySelector, resultSelector, EqualityComparer<TKey>.Default);
+}
+
+public static IEnumerable<TResult> MyJoin<TOuter, TInner, TKey, TResult>(
+        this IEnumerable<TOuter> outer,
+        IEnumerable<TInner> inner,
+        Func<TOuter, TKey> outerKeySelector,
+        Func<TInner, TKey> innerKeySelector,
+        Func<TOuter, TInner, TResult> resultSelector,
+        IEqualityComparer<TKey> comparer)
+{
+
+    foreach (var outerItem in outer)
+    {
+        foreach (var innerItem in inner)
+        {
+            if (comparer.Equals(outerKeySelector(outerItem), innerKeySelector(innerItem)))
+            {
+                yield return resultSelector(outerItem, innerItem);
+            }
+        }
+    }
+}
+```
+
+
 ### 參考資料
 [EqualityComparer<T>.Default 屬性](https://docs.microsoft.com/zh-tw/dotnet/api/system.collections.generic.equalitycomparer-1.default?view=netframework-4.8)     
 [Join.cs](https://github.com/dotnet/corefx/blob/master/src/System.Linq/src/System/Linq/Join.cs)
