@@ -17,16 +17,11 @@
 12. [Projection Operators - SelectMany](https://hackmd.io/mNBV8TbOQ32VSdY83nLcHg?view)
 12. [Restriction Operators - Where](https://hackmd.io/DcrS1BVHT9C1ygmUxU-yGg?view)
 21. [Element Operators - First & Single & Last & ElementAt & (_leftFourItem)OrDefault](https://hackmd.io/xH9XwCvDQtq0oTi2hkAW6g?view#%E7%B8%BD%E7%B5%90)
-
 16. [Partitioning Operators - Take & TakeWhile & TakeLast & Skip & SkipWhile & SkipLast](https://hackmd.io/R4TmtFzRTWanD6Hla0-jHQ?view)
 19. [Generation Operators - Repeat & Range & Empty & DefaultIfEmpty](https://hackmd.io/MzS8dYhXT6yuc_jJAqZMog?view)
-
 14. [Grouping Operators - GroupBy](https://hackmd.io/1TKMrbVMQZuTJ1wGGg6URg?view)
-
 23. [Join Operators - Join](https://hackmd.io/ykn7yeeLS4qRgsNck1m_RA?view)
 21. [Join Operators - GroupJoin ](https://hackmd.io/jX60lVihStOT5Lk8tVS7VA?view)
-
-
 20. [Miscellaneous Operators - Concat & SequenceEqual & Zip ](https://hackmd.io/Zl9Vtkh3RYqfT5ieGHmczw?view)
 18. [Quantifiers - Any & All & Contains ](https://hackmd.io/foPC9IiWQWWoqDFn9zzTUQ?view)
 22. [ToArray & ToList & ToLookup & ToDictionary & ToHashSet & OfType & Cast & AsEnumerable](https://hackmd.io/kR9KRGIsSs20M-pxyU8lQA?view)
@@ -36,3 +31,7 @@
 13. [Ordering Operators - Reverse](https://hackmd.io/0Q8MnVXnStSuEEh_qSr_nw?view)
 15. [Aggregate Operators - Count & Sum & Average & Min & Max](https://hackmd.io/itytIKAnRrWWUoZ79iyypQ?view)
 16. [Aggregate Operators - Aggregate](https://hackmd.io/N-wyJYp8QC2Ro1KAXnzfzA)
+
+#### 有空再繼續寫
+##### LinQ TO XML
+##### LinQ TO SQL 
