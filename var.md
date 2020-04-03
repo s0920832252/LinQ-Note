@@ -124,6 +124,21 @@ foreach (var studnet in Students)
 
 ![](https://i.imgur.com/P2TMGfB.png)
 
+```C#
+class City
+{
+    public string Name { get; set; } = "City";
+}
+
+public static void Main(string[] args)
+{
+    dynamic dyn = new City();
+    // City 沒有 QWE 屬性 , 但 dynamic Type 在編譯時期不會檢查 
+    // , 而是執行時期才決定其真實 Type , 所以執行時 , 才會跳例外
+    Console.ReadKey(dyn.QWE); 
+}
+```
+
 dynamic 通常使用於真實型態是動態決定或是未知的時候.
 例如方法參數傳入一 object 型態的變數(真實型態可能是開發者自訂類別). 因此在宣告變數來接這個 object 變數的時候 , 無法寫死單一個類別. 然後你知道該類別的某個變數或是方法名稱 , 希望使用那些方法的時候. 當然此情況也可以使用 Reflection 解決
 
