@@ -1,4 +1,6 @@
 ﻿# LinQ 筆記目錄
+ 
+ 這是我對於 LinQ 的學習筆記.
 
 0. [LinQ 好用網站清單](https://hackmd.io/geIPKi1lTbC7HlAtmE4gcA?sync=&type=)
 1. [LINQ基礎 - 簡介](https://hackmd.io/gwdxkE0GQiKZwsFCZk6v8Q)
