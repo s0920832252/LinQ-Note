@@ -32,6 +32,6 @@
 15. [Aggregate Operators - Count & Sum & Average & Min & Max](https://hackmd.io/itytIKAnRrWWUoZ79iyypQ?view)
 16. [Aggregate Operators - Aggregate](https://hackmd.io/N-wyJYp8QC2Ro1KAXnzfzA)
 
-#### 有空再繼續寫
+#### 有空再繼續整理
 ##### LinQ TO XML
 ##### LinQ TO SQL 
