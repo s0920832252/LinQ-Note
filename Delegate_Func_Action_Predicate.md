@@ -22,7 +22,8 @@ public delegate T CityDelegate<T>(T arg, T arg2);
 3. 委派方法參數的數量
 
 若是使用泛型後 , 則只剩下委派方法參數的數量這一點還需要開發者定義.
-### 泛型委派
+### [泛型委派](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/generics/generic-delegates)
+使用泛型的委派
 #### [泛型](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/generics/)
 
 > 泛型是在 .Net 2.0 新增的功能。泛型將型別參數的概念引進 .NET Framework 中，使得類別和方法在設計時，可以先行擱置一或多個類型的規格，直到用戶端程式碼對類別或方法進行宣告或具現化時再行處理。
@@ -42,36 +43,6 @@ public delegate T CityDelegate<T>(T arg, T arg2);
       ```C#
       public delegate object CityDelegate(object arg, object arg2);
       ```
-
-#### [委派參數與回傳值型別變異性](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates)
-- 委派預設機制
-    - 實值型別只支援不變性
-    - 參考型別支援共變與逆變
-- 自定義委派使用泛型
-    - 對於僅作為輸出的型別參數 , 可考慮加入 out 修飾詞使其支援共變性
-    - 對於僅作為輸入的型別參數 , 可考慮加入 in 修飾詞使其支援逆變性
-- Action 與 Func 皆已完整宣告
-```C#
-delegate object ValDelegate(int i);
-delegate object MyDelegate(string s);
-
-static object SimulateDelegate(string s) => InObjOutStr(s);
-static string InObjOutStr(object obj) => $"Invoke InObjOutStr  {obj.ToString()}";
-static int InStrOutInt(string s) => 3;
-static void Main(string[] args)
-{
-    // 參考型別支援共變與逆變
-    var func = new MyDelegate(InObjOutStr);
-    // 支援實作的機制大概是這樣
-    var result = SimulateDelegate("123");
-
-
-    // 實值型別只支援不變性
-    //var f = new ValDelegate(InObjOutStr); // 實質型別不支援逆變
-    //var func = new MyDelegate(InStrOutInt); // 實質型別不支援共變
-    Console.ReadLine();
-}
-```
 
 ##### 參考
 [C++ 樣板和 C# 泛型之間的差異](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics)
