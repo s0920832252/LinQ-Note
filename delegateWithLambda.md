@@ -278,6 +278,36 @@ static void Main(string[] args)
 9    
 10    
 
+---
+#### [委派參數與回傳值型別變異性](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates)
+- 委派預設機制
+    - 實值型別只支援不變性
+    - 參考型別支援共變與逆變
+- 自定義委派使用泛型
+    - 對於僅作為輸出的型別參數 , 可考慮加入 out 修飾詞使其支援共變性
+    - 對於僅作為輸入的型別參數 , 可考慮加入 in 修飾詞使其支援逆變性
+- Action 與 Func 皆已完整宣告
+```C#
+delegate object ValDelegate(int i);
+delegate object MyDelegate(string s);
+
+static object SimulateDelegate(string s) => InObjOutStr(s);
+static string InObjOutStr(object obj) => $"Invoke InObjOutStr  {obj.ToString()}";
+static int InStrOutInt(string s) => 3;
+static void Main(string[] args)
+{
+    // 參考型別支援共變與逆變
+    var func = new MyDelegate(InObjOutStr);
+    // 支援實作的機制大概是這樣
+    var result = SimulateDelegate("123");
+
+
+    // 實值型別只支援不變性
+    //var f = new ValDelegate(InObjOutStr); // 實質型別不支援逆變
+    //var func = new MyDelegate(InStrOutInt); // 實質型別不支援共變
+    Console.ReadLine();
+}
+```
 
 ---
 
