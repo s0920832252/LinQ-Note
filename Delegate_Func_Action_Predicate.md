@@ -22,8 +22,8 @@ public delegate T CityDelegate<T>(T arg, T arg2);
 3. 委派方法參數的數量
 
 若是使用泛型後 , 則只剩下委派方法參數的數量這一點還需要開發者定義.
-
-### [泛型](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/generics/)
+### 泛型委派
+#### [泛型](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/generics/)
 
 > 泛型是在 .Net 2.0 新增的功能。泛型將型別參數的概念引進 .NET Framework 中，使得類別和方法在設計時，可以先行擱置一或多個類型的規格，直到用戶端程式碼對類別或方法進行宣告或具現化時再行處理。
 
@@ -31,7 +31,7 @@ public delegate T CityDelegate<T>(T arg, T arg2);
 
 由上面引用可知 , 泛型會在**編譯時** , 將 T 定義為一個變數(?) , 直到**執行時期**第一次遇到才會代入為某個型別 , 但之後的使用 , 則會**重複使用而不用再次代入**. 也就是說使用泛型會先暫緩型別的規格定義，到了實體化時再定義其型別規格.
 
-#### 泛型的優點
+##### 泛型的優點
 1. 類型安全
     - 泛型會將類型安全的負擔轉移給編譯器. 並不需要撰寫程式碼以測試是否為正確的資料類型 , 因為它在編譯時期會強制執行. 降低了類型轉換的需求以及執行階段錯誤的可能性.
 2. 泛型委派讓類型安全回呼不需要建立多個委派類別
@@ -43,8 +43,35 @@ public delegate T CityDelegate<T>(T arg, T arg2);
       public delegate object CityDelegate(object arg, object arg2);
       ```
 
-#### 泛型委派
-使用泛型的委派
+#### [委派參數與回傳值型別變異性](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates)
+- 委派預設機制
+    - 實值型別只支援不變性
+    - 參考型別支援共變與逆變
+- 自定義委派使用泛型
+    - 對於僅作為輸出的型別參數 , 可考慮加入 out 修飾詞使其支援共變性
+    - 對於僅作為輸入的型別參數 , 可考慮加入 in 修飾詞使其支援逆變性
+- Action 與 Func 皆已完整宣告
+```C#
+delegate object ValDelegate(int i);
+delegate object MyDelegate(string s);
+
+static object SimulateDelegate(string s) => InObjOutStr(s);
+static string InObjOutStr(object obj) => $"Invoke InObjOutStr  {obj.ToString()}";
+static int InStrOutInt(string s) => 3;
+static void Main(string[] args)
+{
+    // 參考型別支援共變與逆變
+    var func = new MyDelegate(InObjOutStr);
+    // 支援實作的機制大概是這樣
+    var result = SimulateDelegate("123");
+
+
+    // 實值型別只支援不變性
+    //var f = new ValDelegate(InObjOutStr); // 實質型別不支援逆變
+    //var func = new MyDelegate(InStrOutInt); // 實質型別不支援共變
+    Console.ReadLine();
+}
+```
 
 ##### 參考
 [C++ 樣板和 C# 泛型之間的差異](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics)
