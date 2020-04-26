@@ -8,8 +8,46 @@ tags: LinQ, LinQ基礎 , C#
 為了要對於每一筆資料做特定的處理 , LinQ 方法常會在走訪資料集合的時候 , 透過執行委派來得到期望的結果. 而為求方便與簡潔 , LinQ 常使用 Lambda 來指定委派. 所以 Lambda 對於 LinQ 來說 , 非常重要. 
 
 ### [委派](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/delegates/)
-委派的概念類似於 C++ 的函式指標 , 也許可以想成是儲存方法的變數(?)
+- 委派是一種方法簽章的型別
+- 委派的概念類似於 C++ 的函式指標 , 也許可以想成是儲存方法的變數(?)
+- 想執行委派儲存的方法 , 可直接呼叫(跟方法的呼叫方式相同)或透過執行 Invoke() 實例方法.
+- 委派讓我們可以將方法當做引數傳遞給其他方法
+- C# 中的委派是多重的 (鏈式委派)
+- 委派的存在使得依賴可以降低到方法簽章
+- 委派支援逆變
+- 委派可想成是對介面作抽象 (僅在乎方法簽章型別是否正確)
+- 委派家族(既有的委派型別)
+    - Action 家族
+    - Func 家族
+    - EventHandler 家族
+    - Predicate<T>
 
+### 委派的繼承圖
+```graphviz
+digraph hierarchy {
+
+                nodesep=0.5 // increases the separation between nodes
+                
+                node [color=Red,fontname=Courier,shape=box] //All nodes will this shape and colour
+                edge [color=Blue, style=line] //All the lines look like this
+                
+                T [label="Delegate Class"]      // node T
+		        P [label="MulticastDelegate lass"]  // node P
+                C [label="Action, Func, EventHandler ,以及你自訂的委派..."]
+
+		T->P [label="繼承", fontcolor=darkgreen] 
+        P->C [label="繼承", fontcolor=darkgreen] 
+                
+}
+```
+
+### [MulticastDelegate](https://docs.microsoft.com/zh-tw/dotnet/api/system.multicastdelegate?view=netcore-3.1)
+- MulticastDelegate 為特殊類別. **只有**編譯器和其他工具可以衍生自這個類別 (不是給 Programmer 用的.)
+- 我們使用的委派都繼承自這個類別(包含自定義).
+- 委派是多重的 , 這代表委派可以儲存不只一個方法在它的引動過程清單中.
+- MulticastDelegate 具有**可為複數項目組成的委派連結串列(Linked List)，稱為引動過程清單**. 當叫用 Invoke() 多點傳送委派時 , 依指派的順序循序呼叫引動過程清單中的方法.
+
+### 委派的使用方式
 使用委派的過程如下
 * 建立委派一個 , 步驟如下
     1. 定義委派的結構 -> E.g. delegate void ShowMoneyType(string s, int x)
@@ -25,7 +63,7 @@ tags: LinQ, LinQ基礎 , C#
 - 邏輯端 : 設定執行步驟細節(定義滿足委派結構的方法)
     - 可透過具體函式或是匿名函式來設定.
 - 呼叫端 : 負責連接宣告端和邏輯端 , 並呼叫委派
-    - 此端會需要建立一個委派實體 , 以便呼叫委派  
+    - 此端決定呼叫委派的時機 (會需要建立一個委派實體 , 以便呼叫委派)  
 
 以下為**指派**實作細節(邏輯端)給委派的三種方式.
 1. 具名函式 : 有函式名的函式 lol
@@ -33,9 +71,9 @@ tags: LinQ, LinQ基礎 , C#
     * 匿名方法
     * Lambda運算式
 
-### C#1.0 具名函式
+#### C#1.0 具名函式
 
-將已經宣告的方法()指派給委派.
+將已宣告的方法指派給委派.
 
 ##### 範例
 ```C#
@@ -70,7 +108,7 @@ public class City
 
 ---
 
-### C#2.0 匿名方法 delegate 關鍵字
+#### C#2.0 匿名方法 delegate 關鍵字
 
 格式 : delegate (arguments) { statements }
 - delegate: 匿名方法的保留字
@@ -108,7 +146,7 @@ public class City
 
 ---
 
-### C#3.0 Lambda
+#### C#3.0 Lambda
 
 格式 : (arguments) => expression | { statements }
 - arguments : 輸入參數
@@ -179,47 +217,7 @@ public class City
 
 ---
 
-### 結論
-想要建立一個符合委派結構的實體 , 從一開始 C#1.0 只能透過指定一個具名函式 , 到 C#2.0 可以使用 delegate 關鍵字以建立匿名方法來定義匿名函式 , 到 C#3.0 可以使用**更簡易**的 Lambda 語法來定義匿名函式
-透過 Lambda , 我們不必再額外定義一個方法去作為具名函式了 , 而是可以再需要呼叫委派時 , 馬上透過 Lambda 語法 , **即時**的實體化委派並呼叫.
-
-ps : 網路上一些文章習慣稱呼這樣透過使用匿名函式實體化的委派為**匿名委派** , 不過我找了微軟文件很久 , 並沒有發現這樣的稱呼呀 :crying_cat_face: 
-
-以下簡易地實作 LinQ 的 Where 方法來作為此篇的結論
-```C#
-public delegate bool CityPredicate<TSource>(TSource item);
-static IEnumerable<TSource> MyWhere<TSource>(this IEnumerable<TSource> source, CityPredicate<TSource> predicate)
-{
-     foreach (var item in source)
-     {
-          if (predicate(item))
-          {
-               yield return item;
-          }
-     }
-}
-
-static void Main(string[] args)
-{
-     List<int> vs = new List<int>() { 5, 4, 8, 7 };
-     foreach (var item in vs.MyWhere(number => number >= 5))
-     {
-          Console.WriteLine(item);
-     }
-     Console.ReadKey();
-}
-```
-
-##### 輸出結果
-5    
-8    
-7    
-
----
-
-### 補充
-
-#### [MulticastDelegate](https://docs.microsoft.com/zh-tw/dotnet/api/system.multicastdelegate?redirectedfrom=MSDN&view=netframework-4.8)
+#### 委派的多重特性
 
 > 表示多重傳送的委派 (Delegate)；也就是說，委派可以在它的引動過程清單中包含一個以上的項目。
 
@@ -281,6 +279,41 @@ static void Main(string[] args)
 10    
 
 
+---
+
+### 結論
+想要建立一個符合委派結構的實體 , 從一開始 C#1.0 只能透過指定一個具名函式 , 到 C#2.0 可以使用 delegate 關鍵字以建立匿名方法來定義匿名函式 , 到 C#3.0 可以使用**更簡易**的 Lambda 語法來定義匿名函式
+透過 Lambda , 我們不必再額外定義一個方法去作為具名函式了 , 而是可以再需要呼叫委派時 , 馬上透過 Lambda 語法 , **即時**的實體化委派並呼叫.:crying_cat_face: 
+
+以下簡易地實作 LinQ 的 Where 方法來作為此篇的結論
+```C#
+public delegate bool CityPredicate<TSource>(TSource item);
+static IEnumerable<TSource> MyWhere<TSource>(this IEnumerable<TSource> source, CityPredicate<TSource> predicate)
+{
+     foreach (var item in source)
+     {
+          if (predicate(item))
+          {
+               yield return item;
+          }
+     }
+}
+
+static void Main(string[] args)
+{
+     List<int> vs = new List<int>() { 5, 4, 8, 7 };
+     foreach (var item in vs.MyWhere(number => number >= 5))
+     {
+          Console.WriteLine(item);
+     }
+     Console.ReadKey();
+}
+```
+
+##### 輸出結果
+5    
+8    
+7    
 
 ---
 
