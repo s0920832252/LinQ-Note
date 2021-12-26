@@ -18,13 +18,12 @@ tags: LinQ, LinQ基礎 , C#
 ### Enumerable 的內容
 
 - > 參考91大的blog
-![](https://i.imgur.com/TzQDTov.jpg)
+![TzQDTov.jpg](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/TzQDTov.jpg?raw=true)
 
 由上面這張圖 , 我們可以知道其內部放置三種方法.
 - 針對 IEnumerable<T> 的擴充方法
     - Where , Select , Max , Average 等等...
-    - ![](https://i.imgur.com/Ccf7Izj.png)
-
+    - ![Ccf7Izj.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/Ccf7Izj.png?raw=true)
 - 針對 IEnumerable 的擴充方法
     - Cast<T> : 把 IEnumerable 中的成員都強制轉型成T , 若轉型失敗 , 會拋出例外.
     - OfType<T> : 把 IEnumerable 中 , 屬於 T 型別的成員都抽出來
