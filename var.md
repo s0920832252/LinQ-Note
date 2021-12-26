@@ -21,10 +21,8 @@ tags: LinQ , LinQ基礎 , C#
        Console.ReadKey();
   }
   ```
-  執行結果 : ![](https://i.imgur.com/zSgKRER.png)
-
+  執行結果 : ![zSgKRER.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/zSgKRER.png?raw=true)
   - 因為在編譯時期決定真實型別 , 因此當使用 var 宣告變數型別後 , 要馬上初始化其變數. 否則編譯器會因為無法推斷其型別而無法編譯.
-    
   - 因為在編譯時期決定真實型別 , 所以當用 var 宣告變數後 , intellisense 可以支援.
     
 2. 宣告 var 的變數以及你自己宣告型別的變數並**無差別** , 差別僅在於 var 是用編譯器來幫你推斷真實型別.
@@ -66,11 +64,7 @@ tags: LinQ , LinQ基礎 , C#
          Console.ReadKey();
     }
     ```    
-    執行結果 : ![](https://i.imgur.com/GAktiaE.png)
-
-
-
-
+    執行結果 : ![GAktiaE.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/GAktiaE.png?raw=true)
     - 從上圖可以看到 , 變數型態是<>f__AnonymousType0\`2 以及 <>f__AnonymousType1\`2 這樣的東西. 如 MSDN 上所說 , 這是一個臨時產生的變數名稱 , 所以當離開方法區塊 , 這個變數的生命週期就結束了(失去使用上的意義).
     - 基於效率考量 , 編譯器會重複使用具有**相同參數個數與參數名稱**的匿名型別 , 而不會每碰到一個匿名型別的宣告就產生一個新的泛型類別. 所以 annoymous 和 annoymous2 以及annoymous3 的實際型別都一樣.
     
@@ -116,7 +110,7 @@ foreach (var studnet in Students)
 
 由引用可知 , dynamic 在編譯時期的型態為 object , 其真實型態會在執行時期才決定. 因此下圖的程式編譯會過 , 但會在執行期間出錯.
 
-![](https://i.imgur.com/P2TMGfB.png)
+![P2TMGfB.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/P2TMGfB.png?raw=true)
 
 ```C#
 class City
