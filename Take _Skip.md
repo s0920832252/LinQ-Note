@@ -437,11 +437,10 @@ private static IEnumerable<TSource> MySkipLastIterator<TSource>(IEnumerable<TSou
 ### Summary
 1. Take 可以用這張示意圖來做為總結
     - [圖片來源](https://ithelp.ithome.com.tw/articles/10197118)
-    - ![](https://i.imgur.com/bYTzrhJ.png)
+    - ![bYTzrhJ.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/bYTzrhJ.png?raw=true)
 1. Skip 可以用這張示意圖來做為總結
     - [圖片來源](https://ithelp.ithome.com.tw/articles/10196894)
-    - ![](https://i.imgur.com/4ZTVz2Y.png)
-
+    - ![4ZTVz2Y.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/4ZTVz2Y.png?raw=true)
 1. 有延遲執行的特性 - 使用 foreach 或是使用 GetEnumerator() 時才會執行函式.
 1. 沒有查詢運算式 ( SQL like Query syntax )
 1. Take 或 TakeLast 指定的 count 數量大於集合數量 , 則傳回完整的集合
