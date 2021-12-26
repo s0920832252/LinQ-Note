@@ -19,7 +19,6 @@ tags: LinQ, LinQ基礎 , C#
         * System.Collections.IEnumerator
         * System.Collections.Generic.IEnumerator<T>
     * Enumerator 是實作 MoveNext()、Reset() 以及具有屬性 Current 的物件
-    
 - Enumerable : the logical representation of a sequence. It is not itself a cursor, but an object that produces cursors over itself
     * 實作介面
         * IEnumerable 
@@ -29,7 +28,6 @@ tags: LinQ, LinQ基礎 , C#
 ---
 
 ### IEnumerable & IEnumerator
-
 在 C# 中 , 若是希望資料集合類別具有走訪能力 , 需要實作 IEnumerable 以及 IEnumerator 兩個介面(或是它們的泛型版本)
 
 - IEnumerable
@@ -40,7 +38,6 @@ tags: LinQ, LinQ基礎 , C#
     }
     ```
     由 IEnumerable 這個介面可以知道 C# 對於資料集合是否可被列舉(走訪)的定義是其是否具備取得 Enumerator(列舉器)的能力 , 換句話說實作介面 IEnumerable 代表此資料集合中的成員可以被列舉.
-    
 - IEnumerator
     ```C#
     public interface IEnumerator
@@ -51,13 +48,10 @@ tags: LinQ, LinQ基礎 , C#
     }
     ```
     依據介面 IEnumerator 可以知道 Enumerator 負責將其所屬的資料集合中的成員 , 逐一取出並回傳. 因此其將實作 MoveNext() & Reset()以及具有屬性 Current. 請參考下圖.
-    
-    ![](https://i.imgur.com/ze6pKBH.gif)
-    
+    ![ze6pKBH.gif](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/ze6pKBH.gif?raw=true)       
     - Current 屬性 : 回傳**目前**走訪到的成員內容值.
     - MoveNext() : 走訪到下一個成員 , 並回傳bool值來告知向下移動是否成功. 
     - Reset : 重置走訪的位置.
-    
 ---
 
 ### 範例
@@ -104,7 +98,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/9BtSkTR.png)
+![9BtSkTR.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/9BtSkTR.png?raw=true)
 
 走訪所有元素的方式有兩種
 * 採用 foreach
@@ -134,7 +128,7 @@ foreach (var item in fiveelements)
 ### .Net繼承關西
 
 >  book - C# 4.0 in Nutshell 
-    ![](https://i.imgur.com/TDmJg3G.png)
+    ![TDmJg3G.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/TDmJg3G.png?raw=true)
 
 根據上圖 , 我們可以知道 C# 常用的集合介面(ICollection、IList、IDictionary)都有繼承 IEnumerable 或是 IEnumerable<T> , 也因此實作這些集合界面的類別 , 也都具備資料走訪能力.
 
@@ -145,7 +139,7 @@ foreach (var item in fiveelements)
 2. 實作 IEnumerable 與 IEnumerable<T> 界面 , 需要實作 GetEnumerator() 用來回傳列舉器(Enumerator)物件 - 實作IEnumerator
 3. 列舉器(Enumerator)是實作走訪各個資料元素的類別的物件
 4. > 引用91大的blog
- ![](https://i.imgur.com/ZepI1wi.png)
+ ![ZepI1wi.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/ZepI1wi.png?raw=true)
 
 
 
