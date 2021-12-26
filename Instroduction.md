@@ -27,7 +27,7 @@ LinQ希望可以藉由統一的資料存取模型來操作不同類型的資料.
 
 ### LinQ架構.
 
-![](https://i.imgur.com/Bi1R7IC.jpg)
+![Bi1R7IC.jpg](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/Bi1R7IC.jpg?raw=true)
 
 
 #### 由上圖可以知道
