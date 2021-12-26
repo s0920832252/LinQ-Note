@@ -91,7 +91,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/1OvdFtj.png)
+![1OvdFtj.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/1OvdFtj.png?raw=true)
 
 ---
 
