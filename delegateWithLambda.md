@@ -156,7 +156,6 @@ public class City
             x  => x * 15 //合法
            (x,y) => x * y //合法 
            ```
-          
     - **可以不用明確指定型別** , 但明確指定型別時一定要加上括號
         - ```C#
           (int x) => x * 15 //合法
@@ -165,7 +164,6 @@ public class City
         - ```C#
           () => 1 * 15 //合法
           ```
-
 - expression: 運算式
     - 不使用大括號{} , 則僅能使用單行程式碼作為運算式.
     - 運算式後**不需要加分號 ;**
@@ -183,7 +181,6 @@ public class City
                        return value;
                      } //合法
           ```
-
 #### 比較 Lambda 與匿名方法的差異
 1. **不用透過 delegate 關鍵字**來建立匿名函式.
 2. 除非會影響可讀性 , 否則**不需要定義參數的型別** .
@@ -245,7 +242,7 @@ static void Main(string[] args)
 
 輸出結果
 
-- ![](https://i.imgur.com/xWJm54q.png)
+- ![xWJm54q.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/xWJm54q.png?raw=true)
 
 
 
