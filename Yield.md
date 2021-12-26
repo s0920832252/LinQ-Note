@@ -61,7 +61,7 @@ static void Main(string[] args)
 ```
 
 ##### 輸出結果
-![](https://i.imgur.com/NGActqW.png)
+![NGActqW.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/NGActqW.png?raw=true)
 
 
 #### 範例2 - 不使用 yield 完成走訪功能
@@ -111,7 +111,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/5LnI64S.png)
+![5LnI64S.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/5LnI64S.png?raw=true)
 
 
 由上面兩個範例 我們可以知道
@@ -170,7 +170,7 @@ static void Main(string[] args)
 
 ##### 輸出結果
 
-![](https://i.imgur.com/Js81Jn4.png)
+![Js81Jn4.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/Js81Jn4.png?raw=true)
 
 
 
@@ -238,7 +238,7 @@ public class Enumerator<T> : IEnumerator<T>
 }
 ```
 
-![](https://i.imgur.com/F5BCyIJ.png)
+![F5BCyIJ.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/F5BCyIJ.png?raw=true)
 
 
 ---
