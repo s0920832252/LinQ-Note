@@ -72,7 +72,7 @@ Func<T , T1 , … , Tn , TResult> 代表一個委派有 n+1 個輸入參數 , �
 下圖是微軟預先定義的 Func , 總共有十七個. 也就是說 Func 的輸入參數最多可以接受十六個輸入參數. 最少零個.
 
 
-![](https://i.imgur.com/5v7AYfi.png)
+![5v7AYfi.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/5v7AYfi.png?raw=true)
 
 ##### 範例
 ```C#
