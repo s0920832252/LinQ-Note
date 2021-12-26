@@ -111,7 +111,7 @@ public static List<Student> GetStudents()
 }
 ```
 #### 結果
-![](https://i.imgur.com/6LsbQDz.png)
+![6LsbQDz.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/6LsbQDz.png?raw=true)
 
 ---
 
