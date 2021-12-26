@@ -8,7 +8,7 @@ tags: LinQ , C# , Join Operators
 在 SQL 中 , 我們可能會有兩張表 , 一張表是個人的資料 , 而另一張表是寵物的資料 , 然後會有一個 ID 來關聯兩張表. 這時如果我們要找某個人有哪些寵物就會使用到 Join 的語法來合併個人以及寵物的資料
 
 Join 有很多種形式 , 如下圖    
-![](https://i.imgur.com/susPQqA.png)    
+![susPQqA.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/susPQqA.png?raw=true)    
 [參考來源](https://dotblogs.com.tw/brooke/2015/03/15/150726)
 
 LinQ 的 Join 是 Inner Join (圖中最中間) ,
