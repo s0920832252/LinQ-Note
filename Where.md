@@ -14,7 +14,7 @@ Where 在 LINQ 中就是篩選條件的方法 , 我們可以使用 Where **取�
 
 - 從集合中取得所有符合特定條件的元素 (結果可能是複數).
 - [示意圖](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/linq/filtering-data)
-  > ![](https://i.imgur.com/NWDT0nG.png)
+  > ![NWDT0nG.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/NWDT0nG.png?raw=true)
 
 
 ### 多載型式
@@ -79,7 +79,7 @@ static void Main(string[] args)
 ```
 
 輸出結果
-![](https://i.imgur.com/FgZ45AP.png)
+![FgZ45AP.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/FgZ45AP.png?raw=true)
 
 由上面的例子可以知道使用 Where 的優點如下
 1. 寫法比較簡潔
@@ -147,7 +147,7 @@ static void Main(string[] args)
 }
 ```
 輸出結果 
-![](https://i.imgur.com/qNpJGP5.png)
+![qNpJGP5.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/qNpJGP5.png?raw=true)
 
 
 ### 參考
