@@ -16,7 +16,7 @@ tags: LinQ , C# , Grouping Operators
 
 ##### [GroupBy](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/linq/grouping-data)
 使用 GroupBy 時需要指定分組的 Key ( 通常是成員的某個屬性 ) , 以此屬性做為分組的依據
-![](https://i.imgur.com/4d4pLmU.png)
+![4d4pLmU.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/4d4pLmU.png?raw=true)
 
 ### [多載](https://docs.microsoft.com/zh-tw/dotnet/api/system.linq.enumerable.groupby?view=netframework-4.8)
 依照 elementSelector , resultSelector , comparer 的有無 , 共有八個多載 , 此處使用 comparer 作為劃分 , 分成四組.
@@ -143,7 +143,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/eg0fgKj.png)
+![eg0fgKj.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/eg0fgKj.png?raw=true)
 
 ```C#
 static void Main(string[] args)
@@ -172,7 +172,7 @@ static void Main(string[] args)
         }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/2Ewg17z.png)
+![2Ewg17z.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/2Ewg17z.png?raw=true)
 
 ```C#
 static void Main(string[] args)
@@ -207,7 +207,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/1m9jONZ.png)
+![1m9jONZ.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/1m9jONZ.png?raw=true)
 
 ```C#
 static void Main(string[] args)
@@ -243,7 +243,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/JyIQaa5.png)
+![JyIQaa5.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/JyIQaa5.png?raw=true)
 
 
 
