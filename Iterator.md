@@ -19,7 +19,7 @@ tags: LinQ, LinQ基礎 , C#
 ---
 
 ### 結構
-![](https://i.imgur.com/67DuZJI.png)
+![67DuZJI.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/67DuZJI.png?raw=true)
 - Iterator : 負責定義完成一個走訪的動作需要實作哪些方法的介面
   - 通常有 MoveNext、CurrentItem、Fisrt、IsDone、Reset 之類的方法或屬性讓子類實作
 - Aggregate : 負責定義如何調用實作 Iterator 的物件來負責走訪
@@ -105,7 +105,7 @@ tags: LinQ, LinQ基礎 , C#
          Console.ReadKey();
      }
     ```
-- 輸出結果 ![](https://i.imgur.com/4Q6R9nx.png)
+- 輸出結果 ![4Q6R9nx.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/4Q6R9nx.png?raw=true)
 
 ---
 ### .Net 的 Iterator
@@ -127,7 +127,7 @@ tags: LinQ, LinQ基礎 , C#
     }
     ```
     C# 大部分的資料結構都有實作 IEnumerable 介面 , 像是 List
-    ![](https://i.imgur.com/bUIHiwl.png)
+    ![bUIHiwl.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/bUIHiwl.png?raw=true)
 
     
 所以上述範例 - 走訪整數 , 更改下列動作後 , 就可以使用foreach關鍵字.
@@ -191,7 +191,7 @@ static void Main(string[] args)
     Console.ReadKey();
 }
 ```
-- 輸出結果 ![](https://i.imgur.com/4Q6R9nx.png)
+- 輸出結果 ![4Q6R9nx.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/4Q6R9nx.png?raw=true)
 
 ---
 ### 總結
