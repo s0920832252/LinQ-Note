@@ -13,7 +13,6 @@ First 算是 LinQ 取值類擴充方法中很常使用的方法 , 它會回傳�
 
 1. First<TSource>(this IEnumerable<TSource>)	
     - Returns the first element of a sequence.
-
 2. First<TSource>(this IEnumerable<TSource>, **Func<TSource,Boolean**>)	
     - Returns the first element in a sequence that **satisfies a specified condition.**
 
@@ -292,7 +291,6 @@ Single 會回傳來源序列中唯一的元素或唯一一個符合條件的元�
 
 1. Single<TSource>(this IEnumerable<TSource>)	
     - Returns the only element of a sequence, and throws an exception if there is not exactly one element in the sequence.
-    
 2. Single<TSource>(this IEnumerable<TSource>, Func<TSource,Boolean>)	
     - Returns the only element of a sequence that satisfies a specified condition, and throws an exception if more than one such element exists.
 
@@ -439,7 +437,7 @@ public static TSource MySingleOrDefault<TSource>(this IEnumerable<TSource> sourc
 ---
 ### 總結 - First、Single、Last、FirstOrDefault、LastOrDefault、SingleOrDefault
 [圖片來源](http://www.technicaloverload.com/linq-single-vs-singleordefault-vs-first-vs-firstordefault/)
-![](https://i.imgur.com/iVfrxk6.png)
+![iVfrxk6.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/iVfrxk6.png?raw=true)
 
 ---
 
@@ -550,11 +548,8 @@ public static TSource MyElementAtOrDefault<TSource>(this IEnumerable<TSource> so
     - 若是需要符合條件的第一個項目 , 使用 First
     - 若是需要符合條件的最後一個項目 , 使用 Last
     - 若是需要符合條件的僅有一個項目 , 使用 Single
-    
 2. 若是僅是需要找出集合中符合條件的項目 , 建議使用 First , 效能較佳. 原因是它找到符合條件的項目後 , 會立刻回傳. 而不會將集合中的元素都走訪完畢. 
-
 3. 建議只有非 Array 以及 List 資料型別才使用 ElementAt .
-
 4. 有實作 indexer 的集合類型 , 像是 Array 以及 List 資料型態. 想取出第一個、最後一個或是唯一的元素 , 不建議使用 First、Single、Last. 因為其可以直接透過索引值取值.
 
 ---
