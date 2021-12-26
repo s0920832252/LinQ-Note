@@ -27,7 +27,6 @@ tags: LinQ, LinQ基礎 , C#
 3. 宣告自己的 static function -> 對照 : NextWeekDay
 4. 第一個參數前要加 this , 參數型別代表要依附的型別 -> 對照 : DateTime
 5. function 回傳型別 , 代表此擴充方法回傳的型別. (與一般函數同) -> 對照 : DateTime
-
     以下新增一個擴充方法 NextWeekDay (回傳下一個星期的 DateTime ), 將其依附在 DateTime 類別. (原本 DateTime 類別沒有這個方法)
     ```
     namespace ConsoleApp1
@@ -97,7 +96,6 @@ tags: LinQ, LinQ基礎 , C#
          }
     }
     ```
-
 * 以下是呼叫程式碼
     ```C#
     static void Main(string[] args)
@@ -109,7 +107,7 @@ tags: LinQ, LinQ基礎 , C#
     }
     ```
 * 輸出結果    
-![](https://i.imgur.com/tJ6hPOl.png)
+![tJ6hPOl.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/tJ6hPOl.png?raw=true)
 
 上述那個例子有兩點值得探討. 
 1. 擴充方法是屬於該靜態類別的 , 因此若是權限允許的話 , 自然也能存取靜態成員(實務上需要避免) 
@@ -123,7 +121,7 @@ tags: LinQ, LinQ基礎 , C#
     }
     ```
      輸出結果如下圖.
-    ![](https://i.imgur.com/AKfX1Vd.png)
+    ![AKfX1Vd.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/AKfX1Vd.png?raw=true)
 2. 即使是自定義類別 City , 也可以依附. 只要此擴充方法的靜態類別認識這個類別即可.
 
 ---
