@@ -139,7 +139,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/OMJQevR.png)
+![OMJQevR.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/OMJQevR.png?raw=true)
 
 #### 有 index 的版本
 
@@ -178,7 +178,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/TuuB97D.png)
+![TuuB97D.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/TuuB97D.png?raw=true)
 
 ### 參考
 [Select的原碼探險](https://ithelp.ithome.com.tw/articles/10194885)
@@ -199,7 +199,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/3vhJPx7.png)
+![3vhJPx7.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/3vhJPx7.png?raw=true)
 
 
 ---
