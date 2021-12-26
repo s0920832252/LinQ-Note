@@ -166,7 +166,7 @@ public static IEnumerable<TResult> Empty<TResult>();
      var set2 = Enumerable.Empty<string>();
      Console.WriteLine($"{set == set2} {set.Equals(set2)} {ReferenceEquals(set, set2)}");
      ```
-   - ![](https://i.imgur.com/96V8c3N.png)
+   - ![96V8c3N.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/96V8c3N.png?raw=true)
   
 #### [Empty 的用法](https://docs.microsoft.com/zh-tw/dotnet/api/system.linq.enumerable.empty?view=netframework-4.8)
 ```C# 
@@ -246,7 +246,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/wU9yMfy.png)
+![wU9yMfy.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/wU9yMfy.png?raw=true)
 
 #### 簡單實作自己的 DefaultIfEmpty
 ```C#
