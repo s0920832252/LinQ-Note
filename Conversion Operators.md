@@ -235,7 +235,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/bxC8guE.png)
+![bxC8guE.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/bxC8guE.png?raw=true)
 
 #### 簡單實作自己的 ToLookup
 ```C#
@@ -312,7 +312,7 @@ static void Main(string[] args)
 }  
 ```
 ##### 輸出結果
-![](https://i.imgur.com/OcOMZXI.png)
+![OcOMZXI.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/OcOMZXI.png?raw=true)
 
 ```C#
 static void Main(string[] args)
@@ -337,7 +337,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/5R4lsBj.png)
+![5R4lsBj.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/5R4lsBj.png?raw=true)
 
 
 
@@ -416,7 +416,7 @@ static void Main(string[] args)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/Ns0h7EW.png)
+![Ns0h7EW.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/Ns0h7EW.png?raw=true)
 
 #### 簡單實作自己的 ToHashSet 
 ```C#
