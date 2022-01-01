@@ -21,8 +21,20 @@ C#的語法糖真的是多到一個爆炸呀:laughing:
 
 > 每次反覆運算foreach迴圈 (或直接呼叫 IEnumerator.MoveNext)，下一個迭代器程式碼主體都會在上一個 yield return 陳述式之後繼續。 然後繼續執行至下一個 yield return 陳述式，直到達到迭代器主體結尾，或遇到 yield break 陳述式為止。
 
+> 迭代器的宣告必須符合下列需求：傳回型別必須是下列其中一種類型：
+> - IAsyncEnumerable<T>
+> - IEnumerable<T>
+> - IEnumerable
+> - IEnumerator<T>
+> - IEnumerator     
+>
+> 宣告不能有任何 in、 ref或 out 參數。
+> 傳回 yield 或 IEnumerable 的 IEnumerator 類型迭代器為 object。 如果反覆運算器傳回 IEnumerable<T> 或 IEnumerator<T> ，則必須從語句中的運算式類型 yield return 到泛型型別參數進行隱含轉換。
+您無法在下列項目中包含 yield return 或 yield break 陳述式：
+Lambda 運算式與匿名方法。
+包含不安全區塊的方法。 如需詳細資訊，請參閱 unsafe。
 
-#### 範例1 - 使用 yield 完成走訪功能
+    #### 範例1 - 使用 yield 完成走訪功能
 
 ```C#
 public class DaysOfTheWeek : IEnumerable
