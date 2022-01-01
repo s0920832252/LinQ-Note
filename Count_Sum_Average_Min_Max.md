@@ -485,7 +485,7 @@ foreach (var item in query)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/88iMY5a.png)
+![88iMY5a.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/88iMY5a.png?raw=true)
 
 ---
 
@@ -520,7 +520,7 @@ foreach (var item in query)
 }
 ```
 ##### 輸出結果
-![](https://i.imgur.com/vxsFJYd.png)
+![vxsFJYd.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/vxsFJYd.png?raw=true)
 
 ---
 
