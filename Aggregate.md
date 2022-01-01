@@ -8,7 +8,7 @@ tags: LinQ , C# , Aggregate Operators
 
 > An aggregation operation computes a single value from a collection of values.
 
-![](https://i.imgur.com/WJruW0n.png)
+![WJruW0n.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/WJruW0n.png?raw=true)
 
 Aggregate 的意思是加總的、聚合的. 也就是說 Aggregate 會將集合元素透過若干處理**合併**為一個結果 , 並回傳.
 
@@ -99,7 +99,7 @@ var comment = people.Aggregate((name: "", age: int.MinValue), (result, element) 
 Console.WriteLine(comment);
 ```
 ##### 輸出結果
-![](https://i.imgur.com/fc56v7g.png)
+![fc56v7g.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/fc56v7g.png?raw=true)
 
 
 ### 實作自己的 Aggregate
