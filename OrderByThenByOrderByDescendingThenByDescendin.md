@@ -10,7 +10,7 @@ LinQ 與排序有關的方法一共有四個方法 , 分別是 OrderBy , ThenBy 
 ### [排序資料 (C#)](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/linq/sorting-data)
 > 排序會根據一個或多個屬性來排序序列的項目。 第一個排序方式會執行元素的主要排序； 您可以藉由指定第二個排序方式來繼續排序每一個主要排序群組內的元素.
 > 下圖顯示對一系列字元執行字母順序排序作業的結果：
-> ![](https://i.imgur.com/B3CbEQK.png)
+> ![B3CbEQK.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/B3CbEQK.png?raw=true)
 > ```C#
 > // 程式碼範例
 > char[] Source = new char[] { 'G', 'C', 'F', 'E', 'B', 'A', 'D' };
