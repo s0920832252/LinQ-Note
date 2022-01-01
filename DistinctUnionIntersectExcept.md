@@ -14,7 +14,7 @@ tags: LinQ , C# , Set Operators
 ### [Distinct](https://docs.microsoft.com/zh-tw/dotnet/api/system.linq.enumerable.distinct?view=netframework-4.8)
 Distinct 方法會回傳不包含重複值的資料集合. 換句話說 , Distinct 方法會移除資料集合中全部的重複值 , 並且將這個僅包含唯一值的資料集合回傳.
 
-![](https://i.imgur.com/gwlxjsW.png)
+![gwlxjsW.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/gwlxjsW.png?raw=true)
 
 
 #### Distinct 的多載
@@ -279,7 +279,7 @@ internal class Set<TElement>
 ```
 ### [Union](https://docs.microsoft.com/zh-tw/dotnet/api/system.linq.enumerable.union?view=netframework-4.8)
 Union 方法會回傳聯集集合. 換句話說 , 它會合併兩個不同的資料集合為一個 , 並且此合併後的資料集合沒有任何的重複值.
-![](https://i.imgur.com/FVUvVjt.png)
+![FVUvVjt.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/FVUvVjt.png?raw=true)
 
 #### Union 的多載
 ```C#
@@ -548,7 +548,7 @@ internal class Set<TElement>
 ```
 ### [Intersect](https://docs.microsoft.com/zh-tw/dotnet/api/system.linq.enumerable.intersect?view=netframework-4.8)
 Intersect 方法回傳交集. 換句話說 , 回傳的資料集合元素必定可在兩個資料集合中各找到一份找到相同的元素.
-![](https://i.imgur.com/NiBWfO4.png)
+![NiBWfO4.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/NiBWfO4.png?raw=true)
 
 
 #### Intersect 的多載
@@ -809,7 +809,7 @@ internal class Set<TElement>
 ```
 ### [Except](https://docs.microsoft.com/zh-tw/dotnet/api/system.linq.enumerable.except?view=netframework-4.8)
 Except 方法回傳差集. 換句話說 , 回傳的資料集合元素內容是以集合一為基礎 , 並且扣除與資料集合二中相同元素後的結果.
-![](https://i.imgur.com/PiiyGa4.png)
+![PiiyGa4.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/PiiyGa4.png?raw=true)
 #### Except 的多載
 ```C#
 public static IEnumerable<TSource> Except<TSource> (
@@ -921,7 +921,7 @@ public static IEnumerable<TSource> MyExcept<TSource>(this IEnumerable<TSource> f
 }
 ```
 #### Except 的 Source Code
-```
+```C#
 public static IEnumerable<TSource> Except<TSource>(this IEnumerable<TSource> first, IEnumerable<TSource> second)
 {
     if (first == null) throw Error.ArgumentNull("first");
