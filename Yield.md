@@ -34,8 +34,7 @@ C#的語法糖真的是多到一個爆炸呀:laughing:
 Lambda 運算式與匿名方法。
 包含不安全區塊的方法。 如需詳細資訊，請參閱 unsafe。
 
-    #### 範例1 - 使用 yield 完成走訪功能
-
+#### 範例1 - 使用 yield 完成走訪功能
 ```C#
 public class DaysOfTheWeek : IEnumerable
 {
@@ -49,7 +48,7 @@ public class DaysOfTheWeek : IEnumerable
      }
 }
 ```
-
+                                            
 ```C#
 static void Main(string[] args)
 {
@@ -152,10 +151,11 @@ public class CityManager
      }
 }
 ```
+    
 ```C#
 static void Main(string[] args)
 {
-     var enumerable = CityManager.GetEnumerable(new List<int>(){ 6, 5, 3, 13, 9, 8, 7 });
+     var enumerable = CityManger.GetEnumerable(new List<int>(){ 6, 5, 3, 13, 9, 8, 7 });
 
      Console.WriteLine($"執行了foreach之前");
      foreach (var num in enumerable)
@@ -184,9 +184,6 @@ static void Main(string[] args)
 
 ![Js81Jn4.png](https://github.com/s0920832252/LinQ-Note/blob/master/Resources/Js81Jn4.png?raw=true)
 
-
-
-
 由上面的範例 我們可以知道執行順序是
 1. foreach & in 在執行時會呼叫 MoveNext() , 然後取出 Current 的值
 1. 取出 Current 的值後 , 執行 foreach 主體.
@@ -194,7 +191,6 @@ static void Main(string[] args)
 1. 上述三個動作會重複執行 , 直到走訪完畢或是碰到 yield break 為止.
 
 ---
-
 
 ### 總結
 
@@ -208,45 +204,41 @@ static void Main(string[] args)
 > - 傳回IEnumerator<T> T或IEnumerable<T>的反覆運算器產生類型為 T。
 > - ![](https://i.imgur.com/fHr22mu.png)
 
-    
-    
-
 ---
 
 ### 補充 - 不使用 yield 實作走訪 list 內成員
 ```C#
 public class CityManger
 {
-     public static IEnumerable<T> GetEnumerable<T>(List<T> _numbers) => new Enumerable<T>(_numbers);
+    public static IEnumerable<T> GetEnumerable<T>(List<T> _numbers) 
+            => new Enumerable<T>(_numbers);
 }
 
 public class Enumerable<T> : IEnumerable<T>
 {
-     private readonly List<T> _list;
-     public Enumerable(List<T> list) => _list = list;
-
-     IEnumerator<T> IEnumerable<T>.GetEnumerator() => new Enumerator<T>(_list);
-     IEnumerator IEnumerable.GetEnumerator() => throw new NotImplementedException();
+    private readonly List<T> _list;
+    public Enumerable(List<T> list) => _list = list;
+    public IEnumerator<T> GetEnumerator() => new Enumerator<T>(_list);
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }
 
 public class Enumerator<T> : IEnumerator<T>
 {
-     private List<T> _list;
-     private int _index = -1;
-     public Enumerator(List<T> list) => _list = list;
+    private List<T> _list;
+    private int _index = -1;
+    public Enumerator(List<T> list) => _list = list;
+    public T Current => _list[_index];
+    object IEnumerator.Current => Current;
 
-     T IEnumerator<T>.Current => _list[_index];
-     public object Current => throw new NotImplementedException();
+    public bool MoveNext()
+    {
+        if (_index != -1 && _list[_index].Equals(3))
+            return false;
+        return ++_index < _list.Count;
+    }
 
-     public bool MoveNext()
-     {
-          if (_index != -1 && _list[_index].Equals(3))
-               return false;
-          return ++_index < _list.Count;
-     }
-
-     public void Reset() => _index = -1;
-     public void Dispose() => _list = null;
+    public void Reset() => _index = -1;
+    public void Dispose() => _list = null;
 }
 ```
 
